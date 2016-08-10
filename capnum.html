@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <title>BotBoot</title>
+    
+    <script type="text/javascript">
+    var a = Math.ceil(Math.random() * 10);
+    var b = Math.ceil(Math.random() * 10);       
+    var c = a + b
+    function num()
+    {
+        document.write("What is "+ a + " + " + b +"? ");
+        document.write("<input id='numinput' type='text' maxlength='2' size='2'/>");
+    }    
+    function Validnum(){
+        var d = document.getElementById('numinput').value;
+        if (d == c) return true;        
+        return false;
+		
+    }
+		
+function reset() {    document.getElementById("numinput").value = "";
+						location.reload();}
+    </script>
+</head>
+<body>
+
+Are you human?<br />
+
+<script type="text/javascript">num()</script>
+
+<input id="Button1" type="button" value="Check" onClick="alert(Validnum());"/>
+<input type="button" onClick="reset();" value="Clear">
+ 
+</body>
+</html>
